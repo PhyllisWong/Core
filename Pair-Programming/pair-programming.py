@@ -51,3 +51,20 @@ twoSum([2, 7, 11, 15], 9)
 If you are done with this problem, figure out and write down the Big-O of your
 twoSum implementation. Try to solve it in O(N) time and space.
 """
+
+
+def twoSum(nums, target):
+    """Find the indices of 2 numbers in the array, that sum to target."""
+    i = 0
+    j = 0
+    while nums[i] + nums[j] != target:
+        if j < len(nums) - 1:
+            j += 1
+        else:
+            i += 1
+            j += 1
+    print([i, j])
+    return [i, j]
+
+
+twoSum([3, 7, 4, 11, 13], 16)
